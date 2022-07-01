@@ -1,23 +1,40 @@
 #!/bin/bash
 
-prefix="/home/freedomDR"
-install_path="${prefix}/software"
-echo $prefix
-echo $install_path
+set -x
 
-cur_pwd=`pwd`
-cd $prefix
+pacman -Syu neovim
+pacman -Syu git
+pacman -Syu tmux
+
+git config --global user.email "1640145602@qq.com"
+git config --global user.name "freedomDR"
+git config --global core.editor "nvim"
+
+
+# https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+
+
+#prefix="/home/freedomDR"
+#install_path="${prefix}/software"
+#echo $prefix
+#echo $install_path
+
+#cur_pwd=`pwd`
+#cd $prefix
 
 # note: need set proxy eg. export HTTP_PROXY HTTPS_PROXY ALL_PROXY
 
 # install neovim and build from source code
-pacman -Syu --disable-download-timeout base-devel cmake unzip ninja tree-sitter curl
-git clone https://github.com/neovim/neovim.git
-cd neovim
-make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=$install_path
-make install
+#pacman -Syu --disable-download-timeout base-devel cmake unzip ninja tree-sitter curl
+#git clone https://github.com/neovim/neovim.git
+#cd neovim
+#make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=$install_path
+#make install
 
-cd $cur_pwd
+#cd $cur_pwd
 
 
 
