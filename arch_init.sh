@@ -2,6 +2,7 @@
 
 set -x
 
+prefix="/home/freedomDR"
 pacman -Syu neovim
 pacman -Syu git
 pacman -Syu tmux
@@ -17,10 +18,13 @@ gh auth login
 # https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# oh-my-zsh 
+git clone https://github.com/gpakosz/.tmux.git $prefix/oh-my-tmux
+ln -s -f $prefix/oh-my-tmux/.tmux.conf ~/.tmux.conf
+cp $prefix/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
 
 
 
-#prefix="/home/freedomDR"
 #install_path="${prefix}/software"
 #echo $prefix
 #echo $install_path
