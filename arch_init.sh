@@ -5,10 +5,13 @@ set -x
 pacman -Syu neovim
 pacman -Syu git
 pacman -Syu tmux
+pacman -Syu github-cli
 
 git config --global user.email "1640145602@qq.com"
 git config --global user.name "freedomDR"
 git config --global core.editor "nvim"
+# 配置token
+gh auth login
 
 
 # https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
