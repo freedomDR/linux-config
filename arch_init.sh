@@ -9,6 +9,7 @@ pacman -Syu tmux
 pacman -Syu github-cli
 pacman -Syu nodejs
 pacman -Syu npm
+pacman -Syu clang
 
 git config --global user.email "1640145602@qq.com"
 git config --global user.name "freedomDR"
