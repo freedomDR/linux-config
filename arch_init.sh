@@ -35,6 +35,9 @@ cp $prefix/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
 git clone --depth=1 https://github.com/freedomDR/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
+# cocvim
+# CocInstall coc-json
+# https://github.com/neoclide/coc.nvim
 
 
 
