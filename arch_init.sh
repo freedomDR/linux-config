@@ -4,6 +4,7 @@ set -x
 
 prefix="/home/freedomDR"
 pacman -Syu git
+pacman -Syu ack
 pacman -Syu zsh
 pacman -Syu neovim
 pacman -Syu tmux
