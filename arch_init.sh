@@ -3,6 +3,10 @@
 set -x
 
 prefix="/home/freedomDR"
+" It is possible no man entry. need midify /etc/pacman.conf comment /usr/share/man
+pacman -Syu man-db
+pacman -Syu man-pages
+pacman -S $(pacman -Qq $(pacman -Fq /usr/share/man/ | cut -d/ -f2) 2> /dev/null)
 pacman -Syu git
 pacman -Syu ack
 pacman -Syu zsh
