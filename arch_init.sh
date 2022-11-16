@@ -44,6 +44,9 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # cocvim
 # CocInstall coc-json
+# CocInstall coc-clangd
+# CocInstall coc-pyright
+# TODO: save Coc config file
 # https://github.com/neoclide/coc.nvim
 
 
