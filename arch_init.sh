@@ -32,9 +32,12 @@ gh auth login
 
 
 # https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# cp zsh extra_config
+cat $cur_director/.extra_zshrc >> ~/.zshrc
+
+# oh-my-tmux
 git clone https://github.com/gpakosz/.tmux.git $prefix/oh-my-tmux
 ln -s -f $prefix/oh-my-tmux/.tmux.conf ~/.tmux.conf
 ln -s -f $cur_director/.tmux_conf.local ~/.tmux.conf.local
