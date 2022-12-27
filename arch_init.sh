@@ -3,6 +3,7 @@
 set -x
 
 prefix="/root"
+cur_director=`pwd`
 #It is possible no man entry. need midify /etc/pacman.conf comment /usr/share/man
 pacman-key --init
 pacman -Sy archlinux-keyring
@@ -36,7 +37,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # oh-my-zsh
 git clone https://github.com/gpakosz/.tmux.git $prefix/oh-my-tmux
 ln -s -f $prefix/oh-my-tmux/.tmux.conf ~/.tmux.conf
-cp $prefix/oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
+ln -s -f $cur_director/.tmux_conf.local ~/.tmux.conf.local
 
 # install my vimrc (fork from amix/vimrc)
 git clone --depth=1 https://github.com/freedomDR/vimrc.git ~/.vim_runtime
