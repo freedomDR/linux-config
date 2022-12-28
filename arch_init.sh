@@ -4,6 +4,10 @@ set -x
 
 prefix="/root"
 cur_director=`pwd`
+# locale
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
 #It is possible no man entry. need midify /etc/pacman.conf comment /usr/share/man
 pacman-key --init
 pacman -Sy archlinux-keyring
@@ -47,9 +51,6 @@ mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/freedomDR/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
-# locale
-echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-locale-gen
 
 # cocvim
 # CocInstall coc-json
