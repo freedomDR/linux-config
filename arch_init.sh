@@ -47,6 +47,10 @@ mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/freedomDR/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
+# locale
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
 # cocvim
 # CocInstall coc-json
 # CocInstall coc-clangd
