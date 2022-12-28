@@ -40,9 +40,10 @@ cat $cur_director/.extra_zshrc >> ~/.zshrc
 # oh-my-tmux
 git clone https://github.com/gpakosz/.tmux.git $prefix/oh-my-tmux
 ln -s -f $prefix/oh-my-tmux/.tmux.conf ~/.tmux.conf
-ln -s -f $cur_director/.tmux_conf.local ~/.tmux.conf.local
+ln -s -f $cur_director/.tmux.conf.local ~/.tmux.conf.local
 
 # install my vimrc (fork from amix/vimrc)
+mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/freedomDR/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
