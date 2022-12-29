@@ -23,6 +23,8 @@ pacman -Syu github-cli
 pacman -Syu nodejs
 pacman -Syu npm
 pacman -Syu clang
+pacman -Syu htop
+pacman -Syu ps_mem
 
 # init nvim
 mkdir ~/.config/nvim
