@@ -61,6 +61,8 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 # TODO: save Coc config file
 # https://github.com/neoclide/coc.nvim
 
+# TODO: how to use my .clang-format
+
 
 
 
