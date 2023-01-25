@@ -28,6 +28,7 @@ pacman -Syu ps_mem
 
 # init nvim
 mkdir ~/.config/nvim
+# NOTE: vimrc will overwrite init.vim
 touch ~/.config/nvim/init.vim
 
 git config --global user.email "1640145602@qq.com"
@@ -35,7 +36,6 @@ git config --global user.name "freedomDR"
 git config --global core.editor "nvim"
 # 配置git token
 gh auth login
-
 
 # https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
 # oh-my-zsh
