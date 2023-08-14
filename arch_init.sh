@@ -37,12 +37,6 @@ git config --global core.editor "nvim"
 # 配置git token
 gh auth login
 
-# https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# cp zsh extra_config
-cat $cur_director/.extra_zshrc >> ~/.zshrc
-
 # oh-my-tmux
 git clone https://github.com/gpakosz/.tmux.git $prefix/oh-my-tmux
 ln -s -f $prefix/oh-my-tmux/.tmux.conf ~/.tmux.conf
@@ -52,6 +46,13 @@ ln -s -f $cur_director/.tmux.conf.local ~/.tmux.conf.local
 mkdir -p ~/.config/nvim
 git clone --depth=1 https://github.com/freedomDR/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+# https://www.ipaddress.com/ 获取ip地址 修改/etc/hosts即可
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# cp zsh extra_config
+cat $cur_director/.extra_zshrc >> ~/.zshrc
+
 
 
 # cocvim
