@@ -1,0 +1,5 @@
+ https://wiki.archlinux.org/title/java#
+
+ pacman -Sy jdk-openjdk
+ pacman -Sy java-runtime-common
+ archlinux-java status
